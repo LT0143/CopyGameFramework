@@ -45,6 +45,10 @@
     <Compile Include="Base\Variable\Variable.cs" />
     <Compile Include="DataTable\IDataRow.cs" />
     <Compile Include="DataTable\IDataTable.cs" />
+    <Compile Include="DataTable\IDataTableManager.cs" />
+    <Compile Include="DataTable\LoadDataTableFailureEventArgs.cs" />
+    <Compile Include="DataTable\LoadDataTableSuccessEventArg.cs" />
+    <Compile Include="DataTable\LoadDataTableUpdateEventArgs.cs" />
     <Compile Include="Debugger\IDebuggerWindow.cs" />
     <Compile Include="Download\DownloadAgentHelperCompleteEventArgs.cs" />
     <Compile Include="Download\DownloadAgentHelperErrorEventArgs.cs" />
@@ -78,11 +82,19 @@
     <Compile Include="Base\TaskPool\ITask.cs" />
     <Compile Include="Base\TaskPool\ITaskAgent.cs" />
     <Compile Include="Base\TaskPool\TaskPool.cs" />
+    <Compile Include="ObjectPool\IObjectPool.cs" />
+    <Compile Include="ObjectPool\IObjectPoolManager.cs" />
+    <Compile Include="ObjectPool\ObjectBase.cs" />
+    <Compile Include="ObjectPool\ObjectInfo.cs" />
+    <Compile Include="ObjectPool\ObjectPoolBase.cs" />
+    <Compile Include="ObjectPool\ReleaseObjectFilterCallback.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\EventPool\EventPool.Event.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
