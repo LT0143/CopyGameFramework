@@ -2,6 +2,8 @@
 //LT 2018.5.13
 //-------------
 
+using CopyGameFramework.Download;
+using CopyGameFramework.ObjectPool;
 using System;
 
 namespace CopyGameFramework.Resource
@@ -281,6 +283,34 @@ namespace CopyGameFramework.Resource
         /// <param name="currentVariant"></param>
         void SetCurrentVariant(string currentVariant);
 
-        void SetObjectPoolManager(Iobject)
+        /// <summary>
+        /// 设置对象池管理器。
+        /// </summary>
+        /// <param name="objectPoolManager">对象池管理器。</param>
+        void SetObjectPoolManager(IObjectPoolManager objectPoolManager);
+
+        /// <summary>
+        /// 设置下载管理器。
+        /// </summary>
+        /// <param name="downloadManager">下载管理器。</param>
+        void SetDownloadManager(IDownloadManager downloadManager);
+
+        /// <summary>
+        /// 设置解密资源回调函数。
+        /// </summary>
+        /// <param name="decryptResourceCallback">要设置的解密资源回调函数。</param>
+        /// <remarks>如果不设置，将使用默认的解密资源回调函数。</remarks>
+        void SetDecryptResourceCallback(DecryptResourceCallback decryptResourceCallback);
+
+        /// <summary>
+        /// 设置资源辅助器。
+        /// </summary>
+        /// <param name="resourceHelper">资源辅助器。</param>
+        void SetResourceHelper(IResourceHelper resourceHelper);
+
+
+
+
+
     }
 }

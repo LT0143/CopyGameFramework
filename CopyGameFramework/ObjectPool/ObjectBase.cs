@@ -85,5 +85,89 @@ namespace CopyGameFramework.ObjectPool
             m_Priority = priority;
             m_LastUseTime = DateTime.Now;
         }
+
+        /// <summary>
+        /// 获取对象名称。
+        /// </summary>
+        public string Name
+        {
+            get { return m_Name; }
+        }
+
+        /// <summary>
+        ///  获取对象。
+        /// </summary>
+        public object Target
+        {
+            get { return m_Target; }
+        }
+
+        /// <summary>
+        /// 获取或设置对象是否被加锁。
+        /// </summary>
+        public bool Locked
+        {
+            get
+            {
+                return m_Locked;
+            }
+            set
+            {
+                m_Locked = value;
+            }
+        }
+
+        /// <summary>
+        /// 获取或设置对象的优先级。
+        /// </summary>
+        public int Priority
+        {
+            get
+            {
+                return m_Priority;
+            }
+            set
+            {
+                m_Priority = value;
+            }
+        }
+
+        /// <summary>
+        /// 获取对象上次使用时间。
+        /// </summary>
+        public DateTime LastUseTime
+        {
+            get
+            {
+                return m_LastUseTime;
+            }
+            internal set
+            {
+                m_LastUseTime = value;
+            }
+        }
+
+        /// <summary>
+        /// 获取对象的事件。
+        /// </summary>
+        protected internal virtual void OnSpawn()
+        {
+
+        }
+
+        /// <summary>
+        /// 回收对象时的事件。
+        /// </summary>
+        protected internal virtual void OnUnspawn()
+        {
+
+        }
+
+        /// <summary>
+        /// 释放对象。
+        /// </summary>
+        protected internal abstract void Release();
+
+
     }
 }
