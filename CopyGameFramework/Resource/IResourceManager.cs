@@ -308,7 +308,49 @@ namespace CopyGameFramework.Resource
         /// <param name="resourceHelper">资源辅助器。</param>
         void SetResourceHelper(IResourceHelper resourceHelper);
 
+        /// <summary>
+        /// 增加加载资源代理辅助器。
+        /// </summary>
+        /// <param name="loadResourceAgentHelper">要增加的加载资源代理辅助器。</param>
+        void AddLoadResourceAgentHelper(ILoadResourceAgentHelper loadResourceAgentHelper);
 
+        /// <summary>
+        /// 使用单机模式并初始化资源。
+        /// </summary>
+        void InitResources();
+
+        /// <summary>
+        /// 使用可更新模式并检查版本资源列表。
+        /// </summary>
+        /// <param name="latestInternalResourceVersion">最新的资源内部版本号。</param>
+        /// <returns>检查版本资源列表结果。</returns>
+        CheckVersionListResult CheckVersionList(int latestInternalResourceVersion);
+
+        /// <summary>
+        /// 使用可更新模式并更新版本资源列表。
+        /// </summary>
+        /// <param name="versionListLength">版本资源列表大小。</param>
+        /// <param name="versionListHashCode">版本资源列表哈希值。</param>
+        /// <param name="versionListZipLength">版本资源列表压缩后大小。</param>
+        /// <param name="versionListZipHashCode">版本资源列表压缩后哈希值。</param>
+        void UpdateVersionList(int versionListLength, int versionListHashCode, int versionListZipLength, int versionListZipHashCode);
+
+        /// <summary>
+        /// 使用可更新模式并检查资源。
+        /// </summary>
+        void CheckResources();
+
+        /// <summary>
+        /// 使用可更新模式并更新资源。
+        /// </summary>
+        void UpdateResources();
+
+        /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+        void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks);
 
 
 
