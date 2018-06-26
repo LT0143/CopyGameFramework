@@ -18,6 +18,12 @@ namespace CopyGameFramework.Resource
         /// <param name="loadBytesCallback">读取数据流回调函数。</param>
         void LoadBytes(string fileUri, LoadBytesCallback loadBytesCallback);
 
+        /// <summary>
+        /// 卸载场景。
+        /// </summary>
+        /// <param name="sceneAssetName">场景资源名称。</param>
+        /// <param name="unloadSceneCallbacks">卸载场景回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
         void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData);
 
 

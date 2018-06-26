@@ -109,8 +109,22 @@
     <Compile Include="Resource\LoadResourceAgentHelperUpdateEventArgs.cs" />
     <Compile Include="Resource\LoadResourceProgress.cs" />
     <Compile Include="Resource\LoadResourceStatus.cs" />
+    <Compile Include="Resource\LoadSceneCallbacks.cs" />
+    <Compile Include="Resource\LoadSceneDependencyAssetCallback.cs" />
+    <Compile Include="Resource\LoadSceneFailureCallback.cs" />
+    <Compile Include="Resource\LoadSceneSuccessCallback.cs" />
+    <Compile Include="Resource\LoadSceneUpdateCallback.cs" />
+    <Compile Include="Resource\ResourceManager.AssetDependencyInfo.cs" />
+    <Compile Include="Resource\ResourceManager.ReadWriteResourceInfo.cs" />
+    <Compile Include="Resource\ResourceManager.ResouceName.cs" />
     <Compile Include="Resource\ResourceCheckCompleteEventArgs.cs" />
     <Compile Include="Resource\ResourceInitCompleteEventArgs.cs" />
+    <Compile Include="Resource\ResourceManager.AssetInfo.cs" />
+    <Compile Include="Resource\ResourceManager.cs" />
+    <Compile Include="Resource\ResourceManager.ResourceGroup.cs" />
+    <Compile Include="Resource\ResourceManager.ResourceInfo.cs" />
+    <Compile Include="Resource\ResourceManager.ResourceIniter.cs" />
+    <Compile Include="Resource\ResourceManager.VersionListProcessor.cs" />
     <Compile Include="Resource\ResourceMode.cs" />
     <Compile Include="Resource\ResourceUpdateAllCompleteEventArgs.cs" />
     <Compile Include="Resource\ResourceUpdateChangedEventArgs.cs" />
@@ -122,10 +136,16 @@
     <Compile Include="Resource\UnloadSceneSuccessCallback.cs" />
     <Compile Include="Resource\VersionListUpdateFailureEventArgs.cs" />
     <Compile Include="Resource\VersionListUpdateSuccessEventArgs.cs" />
+    <Compile Include="Utility\Converter.cs" />
+    <Compile Include="Utility\Path.cs" />
+    <Compile Include="Utility\Profiler.cs" />
+    <Compile Include="Utility\Profiler.IProfilerHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\EventPool\EventPool.Event.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Resource\ResourceManager.LoadType.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
